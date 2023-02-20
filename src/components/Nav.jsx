@@ -10,7 +10,7 @@ export default function Nav() {
           </div>
           <div className="flex flex-row space-x-3">
           
-              <a href="#" className='text-lg py-2'>Home</a>
+              <a href="#" className='text-lg py-1'>Home</a>
               
               <a href="#" className='bg-black text-white py-2 px-4 rounded h-6'>Add new</a>
             
