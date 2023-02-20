@@ -35,8 +35,8 @@ const [courses, setCourses] = useState([
 ])
   return (
     <div className='container mx-auto py-3'>
-        <h1 className='text-3xl'>Home Page</h1>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4 pt-3'>
+        <h1 className='text-2xl text-center'>Home Page</h1>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4 p-2'>
             {courses.map((course) => (
                 <div className="border-solid border-[2px] border-blue-300 p-5 flex flex-col rounded-lg" key={course
                 .id}>
