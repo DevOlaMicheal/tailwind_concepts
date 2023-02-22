@@ -53,15 +53,15 @@ const [Measurements, setMeasurements] = useState([
 ])
 
 const handleDelete = (id) => {
-    const U = Measurements.filter(measures => measures.id !== id);
+    const New = Measurements.filter(measures => measures.id !== id);
 
-    // setMeasurements(U)
+    setMeasurements(New)
 }
   return (
     <div className='container mx-auto py-3'>
         <h1 className='text-2xl text-center'>Home Page</h1>
-            <MeasureList M={Measurements} handleDelete={handleDelete} title="All Measures" />
-            {/* <MeasureList M={Measurements.filter((m) => m.details.gender === "male")} title="male Measures" /> */}
+            <MeasureList M={Measurements} title="All Measures" handleDelete={handleDelete}  />
+            <MeasureList M={Measurements.filter((m) => m.details.gender === "male")} title="male Measures" handleDelete={handleDelete} />
           
 
     </div>

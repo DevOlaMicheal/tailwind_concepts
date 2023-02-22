@@ -8,7 +8,7 @@ export default function Nav() {
   }
   return (
     <div className='bg-altlearn text-white'>
-        <nav className=' container mx-auto font-semibold'>
+        <nav className='container mx-auto font-semibold'>
         <div className="flex flex-row justify-between p-2">
           <div className="py-2 text-1xl md:text-2xl">
             {Title}

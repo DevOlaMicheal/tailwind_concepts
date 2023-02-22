@@ -34,7 +34,7 @@ export default function MeasureList({ M, title, handleDelete }) {
                      <button
               className="border-[1px] text-center border-green-500 px-4 font-semibold rounded py-[8px] hover:bg-green-500 hover:text-white  md:px-[6px]"
 
-              onClick={handleDelete(measure.id)}
+              onClick={() => handleDelete(measure.id)}
             >
               Completed!
             </button>
