@@ -40,7 +40,7 @@ const [Measurements, setMeasurements] = useState([
     {
         title: "shirt and trouser",
         details: {
-            name: "mirabel michael",
+            name: "Samson Omale",
             date: "1/2/2023",
             gender: "male"
         },
