@@ -1,69 +1,51 @@
-import React, { useState } from 'react'
-import reactLogo from '../assets/react.svg'
-import "./MeasurementList"
-import MeasureList from './MeasurementList'
+import React, { useState, useEffect } from "react";
+import reactLogo from "../assets/react.svg";
+import "./MeasurementList";
+import MeasureList from "./MeasurementList";
 
 export default function Home() {
-    
-const [Measurements, setMeasurements] = useState([
-    {
-        title: "Ankara",
-        details: {
-            name: "John Doe",
-            date: "1/2/2023",
-            gender: "male"
-        },
-        id: '0'
+  const [Measurements, setMeasurements] = useState(null);
+  const [Pending, setPending] = useState(true);
+  const [error, setError] = useState(null);
+ 
 
-    },
-    {
-        title: "Senator",
-        details: {
-            name: "mirabel michael",
-            date: "1/2/2023",
-            gender: "female"
-        },
-        id: '1'
+  useEffect(() => {
+    fetch('http://localhost:8000/Measurementss')
+      .then(res => {
+        if(!res.ok) {
+          throw Error("Could not fetch data, try again")
+        }
+        return res.json()
+      }).then(data => {
+        setMeasurements(data);
+        setPending(false)
+      }).catch(err => {
+        setPending(false)
+        setError(err.message)
+  
+      })
+  }, []);
 
-        
-    },
-    {
-        title: "Corporate",
-        details: {
-            name: "Oluwaseun Gladys",
-            date: "1/2/2023",
-            gender: "female"
-        },
-        id: '3'
-        
-    },
-    {
-        title: "shirt and trouser",
-        details: {
-            name: "Samson Omale",
-            date: "1/2/2023",
-            gender: "male"
-        },
-        id: '4'
-
-        
-    },
-
-
-])
-
-const handleDelete = (id) => {
-    const New = Measurements.filter(measures => measures.id !== id);
-
-    setMeasurements(New)
-}
   return (
-    <div className='container mx-auto py-3'>
-        <h1 className='text-2xl text-center'>Home Page</h1>
-            <MeasureList M={Measurements} title="All Measures" handleDelete={handleDelete}  />
-            <MeasureList M={Measurements.filter((m) => m.details.gender === "male")} title="male Measures" handleDelete={handleDelete} />
-          
-
+  
+    <div className="container mx-auto py-3 top-0">
+      <h1 className="text-2xl text-center">Home Page</h1>
+      {error &&
+      <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-4 text-center rounded relative my-[100px] m-2" role="alert">
+      <strong className="font-bold">opps! failed</strong> <br />
+      <span className="block sm:inline">{error}.</span>
+    
     </div>
-  )
+       }
+      {Pending && <div>Loading...</div>}
+      {Measurements &&  <MeasureList
+        M={Measurements}
+        title="All Measures"
+       
+      />
+
+      }
+      
+    </div>
+  );
 }

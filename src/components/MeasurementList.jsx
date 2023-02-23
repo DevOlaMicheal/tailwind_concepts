@@ -1,6 +1,7 @@
 import React from "react";
 import pimage from '../assets/pro.png'
-export default function MeasureList({ M, title, handleDelete }) {
+import { FaBattleNet, FaArrowRight, FaCheck } from "react-icons/fa";
+export default function MeasureList({ M, title }) {
   return (
     <div>
       <h2 className="text-center pt-2">
@@ -15,28 +16,30 @@ export default function MeasureList({ M, title, handleDelete }) {
         >
         
             <div className="flex flex-col p-2">
-              <p>Name: {measure.details.name}</p>
-              <p>Date: {measure.details.date} </p>
-              <p>gender: {measure.details.gender}</p>
-              <p>status: </p>
+              <p>Name: {measure.name}</p>
+              <p>Date: {measure.date} </p>
+              <p>gender: {measure.gender}</p>
+           
             </div>
           
          
-          <h2 className="font-semibold text-2xl py-1 border-b-2 border-whitee text-center">{measure.title}</h2>
+          <h2 className="font-semibold text-2xl py-1 border-b-2 border-whitee text-center">{measure.style}</h2>
           
           
           <div className="flex flex-row justify-center py-2">
           <button
-              className="border-[1px] text-center border-altlearn px-4 font-semibold rounded py-[8px] hover:bg-altlearn hover:text-white md:px-[6px] mr-1"
+              className=" flex border-[1px] items-center text-center border-altlearn px-4 font-semibold rounded py-[8px] hover:bg-altlearn hover:text-white md:px-[6px] mr-1"
             >
-              view details
+              <span className="mr-[5px] ">view details</span> <FaArrowRight />
             </button>   
-                     <button
-              className="border-[1px] text-center border-green-500 px-4 font-semibold rounded py-[8px] hover:bg-green-500 hover:text-white  md:px-[6px]"
+              <button
 
-              onClick={() => handleDelete(measure.id)}
+              className="flex items-center border-[1px] text-center border-green-500 px-4 font-semibold rounded py-[8px] hover:bg-green-500 hover:text-white  md:px-[6px]"
+
+             
             >
-              Completed!
+               <span className="mr-[5px]">Completed</span>
+              < FaCheck />
             </button>
           </div>
         </div>
