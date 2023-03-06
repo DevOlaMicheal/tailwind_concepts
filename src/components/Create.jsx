@@ -53,20 +53,7 @@ export default function Create() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row mx-3">
-          <div className="px-3 md:w-1/2 my-1 md:mb-0">
-            <label
-              className="block  tracking-wide text-gray-700 text-1xl font-semibold mb-1"
-              for="grid-first-name"
-            >
-              Measurement date
-            </label>
-            <input
-              className="appearance-none block w-full border-rounded py-2 px-4 mb-1 leading-tight focus:outline-none focus:bg-white md:py-3"
-              id="grid-first-name"
-              type="date"
-              placeholder="Jane"
-            />
-          </div>
+          
 
           <div className="px-3 md:w-1/2 my-1 md:mb-0">
             <label
@@ -79,6 +66,20 @@ export default function Create() {
               className="appearance-none block w-full border-rounded py-2 px-4 mb-1 leading-tight focus:outline-none focus:bg-white md:py-3"
               id="grid-first-name"
               type="text"
+              placeholder="Jane"
+            />
+          </div>
+          <div className="px-3 md:w-1/2 my-1 md:mb-0">
+            <label
+              className="block  tracking-wide text-gray-700 text-1xl font-semibold mb-1"
+              for="grid-first-name"
+            >
+              Measurement date
+            </label>
+            <input
+              className="appearance-none block w-full border-rounded py-2 px-4 mb-1 bg-white leading-tight focus:outline-none focus:bg-white md:py-3"
+              id="grid-first-name"
+              type="date"
               placeholder="Jane"
             />
           </div>
