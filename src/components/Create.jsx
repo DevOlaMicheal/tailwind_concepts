@@ -22,7 +22,7 @@ export default function Create() {
           <div className="my-4">
             <hr className="border-1 border-[#212529]"></hr>
           </div>
-          <div className="flex flex-row mx-3">
+          <div className="flex flex-col md:flex-row mx-3">
             <div className="w-full md:w-1/2 px-3 md:mb-0">
               <label
                 className="block  tracking-wide text-gray-700 text-1xl font-semibold mb-1"
@@ -52,8 +52,8 @@ export default function Create() {
               />
             </div>
           </div>
-          <div className="flex flex-row mx-3">
-          <div className="px-3 w-1/2 my-1 md:mb-0">
+          <div className="flex flex-col md:flex-row mx-3">
+          <div className="px-3 md:w-1/2 my-1 md:mb-0">
             <label
               className="block  tracking-wide text-gray-700 text-1xl font-semibold mb-1"
               for="grid-first-name"
@@ -68,7 +68,7 @@ export default function Create() {
             />
           </div>
 
-          <div className="px-3 w-1/2 my-1 md:mb-0">
+          <div className="px-3 md:w-1/2 my-1 md:mb-0">
             <label
               className="block tracking-wide text-gray-700 text-1xl font-semibold mb-1"
               for="grid-first-name"
