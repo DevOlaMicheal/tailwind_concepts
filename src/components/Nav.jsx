@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   const [Title, setTitle] = useState("Tailor Pro");
@@ -7,23 +8,22 @@ export default function Nav() {
     setTitle("Tailors Hub");
   };
   return (
-    <div className="sticky top-0 drop-shadow-lg shadow-red bg-altlearn text-white">
+    <div className="sticky top-0 drop-shadow-lg shadow-red bg-[#212529] text-white">
       <nav className="container mx-auto font-semibold">
         <div className="flex flex-row justify-between p-2">
-          <div className="py-2 text-1xl md:text-2xl">{Title}</div>
+          <div className="py-2 text-2xl md:text-3xl">{Title}</div>
 
           <div className="flex flex-row space-x-3">
-            <a href="#" className="text-md py-1">
+            <Link to="/" className="text-lg py-[8px]">
               Home
-            </a>
+            </Link>
+      <div className="">
+      <Link to="/create" className="flex border-[1px] border-none text-center  px-4 font-semiold rounded py-[8px] bg-altlearn text-white">
+              <span className="mr-[5px]">Add new</span>
 
-            <a
-              href="#"
-              className="bg-black text-white py-2 px-2 rounded max-h-6"
-              onClick={handleClick}
-            >
-              Add new
-            </a>
+            </Link>
+      </div>
+            
           </div>
         </div>
       </nav>
