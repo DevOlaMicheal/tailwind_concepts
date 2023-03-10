@@ -31,6 +31,10 @@ module.exports = {
       fontSize: {
         sm: '20px' 
       },
+
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif']
+      }
       
     },
   },

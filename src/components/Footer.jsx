@@ -1,4 +1,9 @@
-<footer className="text-gray-600 body-font">
+import React from 'react'
+
+export default function Footer() {
+  return (
+    <div>
+        <footer className="text-gray-600 body-font">
   <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
     <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-10 h-10 text-white p-2 bg-blue-500 rounded-full" viewBox="0 0 24 24">
@@ -35,3 +40,6 @@
     </span>
   </div>
 </footer>
+    </div>
+  )
+}

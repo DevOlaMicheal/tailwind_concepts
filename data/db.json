@@ -5,6 +5,13 @@
           "name": "John doe",
           "date": "12/23/2023",
           "gender": "male",
+          "measures": {
+            "shoulder": "45cm",
+            "hips": "15cm",
+            "length": "45cm",
+            "waist": "45cm"
+
+          },
           "id": "1"
           
       },
@@ -14,6 +21,13 @@
           "name": "Pretty Issabela",
           "date": "12/23/2023",
           "gender": "female",
+          "measures": {
+            "shoulder": "45cm",
+            "hips": "15cm",
+            "length": "45cm",
+            "waist": "45cm"
+
+          },
           "id": "2"
 
           

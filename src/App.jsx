@@ -12,7 +12,7 @@ function App() {
 
   return (
     <Router>
-      <div className="App bg-whitee">
+      <div className="App bg-whitee font-montserrat">
         <Nav />
         <Switch>
           <Route exact path="/">
@@ -27,6 +27,7 @@ function App() {
             <BlogDetails />
           </Route>
         </Switch>
+      
       </div>
     </Router>
   );
