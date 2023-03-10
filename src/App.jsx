@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import Home from "./components/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Create from "./components/Create";
+import BlogDetails from "./components/BlogDetails";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,8 +19,12 @@ function App() {
             <Home />
           </Route>
 
-          <Route exact path="/create">
+          <Route path="/create">
             <Create />
+          </Route>
+
+          <Route path="/details/:id">
+            <BlogDetails />
           </Route>
         </Switch>
       </div>

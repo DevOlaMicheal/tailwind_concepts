@@ -6,7 +6,8 @@ export default function useFetch(url) {
     const [error, setError] = useState(null);
   
     useEffect(() => {
-      fetch(url)
+
+        fetch(url)
         .then((res) => {
           if (!res.ok) {
             throw Error("Could not fetch data, try again");
@@ -22,7 +23,8 @@ export default function useFetch(url) {
           setPending(false);
           setError(err.message);
         });
+        
     }, [url]);
-
     return { data, Pending, error}
-}
+
+  }

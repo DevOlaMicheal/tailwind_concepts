@@ -25,7 +25,7 @@ module.exports = {
     extend: {
       colors: {
         altlearn: "#696cff",
-        whitee: "#eee"
+        whitee: "#E5E5E5"
       },
 
       fontSize: {
