@@ -175,7 +175,7 @@ export default function Create() {
                 className="block tracking-wide text-gray-700 text-1xl font-semibold mb-1"
                 for="grid-first-name"
               >
-                burst
+                destiny
               </label>
               <input
                 className="appearance-none rounded-md block w-full text-gray-700 border py-2 px-4 leading-tight focus:outline-none focus:bg-white md:py-3"
@@ -189,7 +189,7 @@ export default function Create() {
                 className="block tracking-wide text-gray-700 text-1xl font-semibold mb-1"
                 for="grid-first-name"
               >
-                Hips
+                bla bla
               </label>
               <input
                 className="appearance-none rounded-md block w-full text-gray-700 border py-2 px-4 leading-tight focus:outline-none focus:bg-white md:py-3"
@@ -204,7 +204,50 @@ export default function Create() {
                 className="block tracking-wide text-gray-700 text-1xl font-semibold mb-1"
                 for="grid-first-name"
               >
-                Bom
+                leg
+              </label>
+              <input
+                className="appearance-none rounded-md block w-full text-gray-700 border py-2 px-4 leading-tight focus:outline-none focus:bg-white md:py-3"
+                id="grid-first-name"
+                type="text"
+                value="0"
+              />
+            </div>
+            <div className="w-full px-3 md:mb-0 my-1 ">
+              <label
+                className="block tracking-wide text-gray-700 text-1xl font-semibold mb-1"
+                for="grid-first-name"
+              >
+                destiny
+              </label>
+              <input
+                className="appearance-none rounded-md block w-full text-gray-700 border py-2 px-4 leading-tight focus:outline-none focus:bg-white md:py-3"
+                id="grid-first-name"
+                type="text"
+                value="0"
+              />
+            </div>
+            <div className="w-full px-3 md:mb-0 my-1 ">
+              <label
+                className="block tracking-wide text-gray-700 text-1xl font-semibold mb-1"
+                for="grid-first-name"
+              >
+                hand lenght
+              </label>
+              <input
+                className="appearance-none rounded-md block w-full text-gray-700 border py-2 px-4 leading-tight focus:outline-none focus:bg-white md:py-3"
+                id="grid-first-name"
+                type="number"
+                value="0"
+              />
+            </div>
+
+            <div className="w-full px-3 md:mb-0 my-1 ">
+              <label
+                className="block tracking-wide text-gray-700 text-1xl font-semibold mb-1"
+                for="grid-first-name"
+              >
+                Head length
               </label>
               <input
                 className="appearance-none rounded-md block w-full text-gray-700 border py-2 px-4 leading-tight focus:outline-none focus:bg-white md:py-3"
