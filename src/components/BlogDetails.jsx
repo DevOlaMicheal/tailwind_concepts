@@ -21,7 +21,19 @@ export default function BlogDetails() {
         </div>
         
         )}
-        {error &&<div>{ error }</div>}
+        {error && (
+        <div
+          className="bg-red-100 border
+           border-red-400 text-red-700 
+          px-4 py-4 text-center 
+          rounded relative my-[100px] m-2"
+          role="alert"
+        >
+          <strong className="font-bold">Error Fetching Data</strong> <br />
+          <span className="block sm:inline">{error}.</span>
+        </div>
+    
+      )}
         {details && (
           
         <DetailsProfile details={details} />

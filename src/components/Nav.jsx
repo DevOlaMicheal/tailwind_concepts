@@ -4,14 +4,12 @@ import { Link } from "react-router-dom";
 
 export default function Nav() {
   const [Title, setTitle] = useState("Tailor Pro");
-  const handleClick = () => {
-    setTitle("Tailors Hub");
-  };
+
   return (
     <div className="sticky top-0 drop-shadow-lg shadow-red bg-[#212529] text-white">
       <nav className="container mx-auto font-semibold">
         <div className="flex flex-row justify-between p-2">
-          <div className="py-2 text-2xl md:text-3xl">{Title}</div>
+          <div className="py-2 text-2xl md:text-3xl">Dashboard</div>
 
           <div className="flex flex-row space-x-3">
             <Link to="/" className="text-lg py-[8px]">
