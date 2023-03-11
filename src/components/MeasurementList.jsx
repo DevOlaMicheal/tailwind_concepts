@@ -41,7 +41,7 @@ export default function MeasureList({ M, title }) {
           </div>
         ))}
 
-              <Test />
+            
           
 
       </div>

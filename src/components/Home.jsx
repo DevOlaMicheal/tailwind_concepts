@@ -3,6 +3,7 @@ import reactLogo from "../assets/react.svg";
 import "./MeasurementList";
 import MeasureList from "./MeasurementList";
 import useFetch from "../useFetch";
+import Test from "./Test";
 
 export default function Home() {
   const {
@@ -27,16 +28,18 @@ export default function Home() {
         </form>
       </div>
       {error && (
-        <div
-          className="bg-red-100 border
-           border-red-400 text-red-700 
-          px-4 py-4 text-center 
-          rounded relative my-[100px] m-2"
-          role="alert"
-        >
-          <strong className="font-bold">Error Fetching Data</strong> <br />
-          <span className="block sm:inline">{error}.</span>
-        </div>
+        // <div
+        //   className="bg-red-100 border
+        //    border-red-400 text-red-700 
+        //   px-4 py-4 text-center 
+        //   rounded relative my-[100px] m-2"
+        //   role="alert"
+        // >
+        //   <strong className="font-bold">Error Fetching Data</strong> <br />
+        //   <span className="block sm:inline">{error}.</span>
+        // </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-4 p-3"><Test /> <Test /> <Test /></div>
+        
       )}
       {Pending && <div>Loading...</div>}
       {Measurements && <MeasureList M={Measurements} title="All Measures" />}
