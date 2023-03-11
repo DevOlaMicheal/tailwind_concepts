@@ -5,7 +5,7 @@ export default function DetailsProfile({ details }) {
   return (
     <div className="p-4 border-[1px] border-black my-4 w-full">
       <div className="flex">
-        <div className="border-solid border-altlearn rounded- bg-white border-2 p-[4rem]">
+        <div className="borde border-altlearn rounded- bg-white border-2 p-[4rem]">
           <p>Client Image</p>
         </div>
         <div className="p-4">
@@ -46,7 +46,7 @@ export default function DetailsProfile({ details }) {
     </tr>
   </tbody>
 </table>
-<div className="text-center flex space-x-1 my-4">
+<div className="flex justify-center space-x-1 my-4">
 <button className="border border-altlearn bg-altlearn p-1 text-white rounded-2xl"> <FaPlus /> </button> 
 <button className="border border-altlearn bg-altlearn p-1 text-white rounded-2xl"> <FaShareAlt /></button> 
 </div>

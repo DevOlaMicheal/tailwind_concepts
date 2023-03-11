@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import useFetch from "../useFetch";
 import DetailsProfile from './Customerprofile/DetailsProfile';
+import loader from '../assets/ripple.svg'
 
 export default function BlogDetails() {
 
@@ -12,7 +13,14 @@ export default function BlogDetails() {
         <div className="text-center">
         <h1 className="text-2xl md:text-4xl">Details - {id}</h1>
         </div>
-        {Pending && <div> Loading.... </div>}
+        {Pending && (
+          <div className="flex h-screen items-center justify-center">
+          <div className="bg-gray-300 p-4">
+            <img src={loader} alt="" srcset="" />
+          </div>
+        </div>
+        
+        )}
         {error &&<div>{ error }</div>}
         {details && (
           
