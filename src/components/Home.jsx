@@ -34,7 +34,7 @@ export default function Home() {
           rounded relative my-[100px] m-2"
           role="alert"
         >
-          <strong className="font-bold">opps! failed</strong> <br />
+          <strong className="font-bold">Error Fetching Data</strong> <br />
           <span className="block sm:inline">{error}.</span>
         </div>
       )}
