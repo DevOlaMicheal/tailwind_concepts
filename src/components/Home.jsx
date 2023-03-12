@@ -3,14 +3,21 @@ import reactLogo from "../assets/react.svg";
 import "./MeasurementList";
 import MeasureList from "./MeasurementList";
 import useFetch from "../useFetch";
-import loader from '../assets/ripple.svg'
+import loader from "../assets/ripple.svg";
 
 export default function Home() {
   const {
     data: Measurements,
     Pending,
     error,
+    setData,
   } = useFetch("http://localhost:8000/Measurements");
+
+  const [search, setSearch] = useState("");
+
+  const handleSearch = () => {
+    console.log("changed");
+  };
 
   return (
     <div className="container mx-auto py-3 top-0">
@@ -22,19 +29,21 @@ export default function Home() {
               type="text"
               placeholder="Search measurements"
               aria-label="Search"
+              value={search}
+              onChange={(e) => {
+                setSearch(e.target.value);
+              }}
             />
-            
           </div>
         </form>
       </div>
       {Pending && (
-          <div className="flex h-screen items-center justify-center">
+        <div className="flex h-screen items-center justify-center">
           <div className="bg-gray-300 p-4">
             <img src={loader} alt="" srcset="" />
           </div>
         </div>
-        
-        )}
+      )}
       {error && (
         <div
           className="bg-red-100 border
@@ -46,9 +55,8 @@ export default function Home() {
           <strong className="font-bold">Error Fetching Data</strong> <br />
           <span className="block sm:inline">{error}.</span>
         </div>
-    
       )}
-     
+
       {Measurements && <MeasureList M={Measurements} title="All Measures" />}
     </div>
   );

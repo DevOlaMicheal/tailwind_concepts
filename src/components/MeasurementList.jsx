@@ -16,7 +16,7 @@ export default function MeasureList({ M, title }) {
             key={measure.id}
           >
             <div className="flex flex-col p-2">
-              <p>Name: {measure.name}</p>
+              <p>Name: {measure.firstname} {measure.lastname}</p>
               <p>Date: {measure.date} </p>
               <p>gender: {measure.gender}</p>
             </div>

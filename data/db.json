@@ -1,102 +1,42 @@
 {
   "Measurements": [
-      {
-          "style": "Bridal Coussete",
-          "name": "Adewumi johnson",
-          "date": "12/23/2023",
-          "gender": "female",
-          "measures": {
-            "shoulder": "45cm",
-            "hips": "15cm",
-            "length": "45cm",
-            "waist": "45cm"
-
-          },
-          "id": "1"
-          
-      },
-
-      {
-          "style": "Ankara gown",
-          "name": "Pretty Issabela",
-          "date": "Mon 14th feb 2023",
-          "gender": "female",
-          "measures": {
-            "shoulder": "45cm",
-            "hips": "15cm",
-            "length": "45cm",
-            "waist": "45cm"
-
-          },
-          "id": "2"
-
-          
-      },
-
-      {
-        "style": "cousset top",
-        "name": "Gladys Ogbeta",
-        "date": "sat 14th march 2023",
-        "gender": "female",
-        "measures": {
-          "shoulder": "45cm",
-          "hips": "15cm",
-          "length": "45cm",
-          "waist": "45cm"
-
-        },
-        "id": "2"
-
-        
-    },
     {
-        "style": "crop top",
-        "name": "Mirabel doe",
-        "date": "sat 14th march 2023",
-        "gender": "female",
-        "measures": {
-          "shoulder": "45cm",
-          "hips": "15cm",
-          "length": "45cm",
-          "waist": "45cm"
-
-        },
-        "id": "1"
-        
-    },
-
-    {
-        "style": "off shoulder gown",
-        "name": "Pretty Issabela",
-        "date": "12/23/2023",
-        "gender": "female",
-        "measures": {
-          "shoulder": "45cm",
-          "hips": "15cm",
-          "length": "45cm",
-          "waist": "45cm"
-
-        },
-        "id": "2"
-
-        
-    },
-
-    {
-      "style": "cousset top",
-      "name": "Gladys Ogbeta",
-      "date": "sat 14th march 2023",
-      "gender": "female",
+      "firstname": "Joy",
+      "lastname": "Micheal",
+      "date": "2023-03-12",
+      "style": "eeerr",
       "measures": {
-        "shoulder": "45cm",
-        "hips": "15cm",
-        "length": "45cm",
-        "waist": "45cm"
-
+        "m1": "23",
+        "m2": "0.0044",
+        "m3": "21",
+        "m4": "23",
+        "m5": "12",
+        "m6": "23",
+        "m7": "0.00",
+        "m8": "12",
+        "m9": "0.00",
+        "m10": "0.00"
       },
-      "id": "2"
-
-      
-  }
+      "id": 1
+    },
+    {
+      "firstname": "Gladys",
+      "lastname": "Ogbeta",
+      "date": "2023-03-12",
+      "style": "Courset top",
+      "measures": {
+        "m1": "10",
+        "m2": "23cm",
+        "m3": "44",
+        "m4": "21",
+        "m5": "90",
+        "m6": "50",
+        "m7": "20",
+        "m8": "0.00",
+        "m9": "0.00",
+        "m10": "0.00"
+      },
+      "id": 2
+    }
   ]
 }
