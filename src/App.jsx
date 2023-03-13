@@ -28,7 +28,7 @@ function App() {
             <BlogDetails />
           </Route>
         </Switch>
-      <Footer />
+      {/* <Footer /> */}
       </div>
     </Router>
   );

@@ -6,10 +6,10 @@ export default function Nav() {
   const [Title, setTitle] = useState("Tailor Pro");
 
   return (
-    <div className="sticky top-0 drop-shadow-lg shadow-red bg-[#212529] text-white">
+    <div className="sticky top-[0px] drop-shadow-lg shadow-red bg-gray-900 text-white">
       <nav className="container mx-auto font-semibold">
         <div className="flex flex-row justify-between p-2">
-          <div className="py-2 text-2xl md:text-3xl">Dashboard</div>
+          <div className="py-2 text-2xl md:text-3xl">Mee</div>
 
           <div className="flex flex-row space-x-3">
             <Link to="/" className="text-lg py-[8px]">

@@ -1,7 +1,7 @@
 import React from "react";
 import { FaEdit, FaPlus, FaShare, FaShareAlt, FaTimes } from "react-icons/fa";
 
-export default function DetailsProfile({ details }) {
+export default function DetailsProfile({ details, handleDelete }) {
   return (
     <div className="p-4 border-[1px] border-black my-4 w-full">
       <div className="flex">
@@ -49,7 +49,7 @@ export default function DetailsProfile({ details }) {
 <div className="flex justify-center space-x-1 my-4">
 <button className="border border-altlearn bg-altlearn p-1 text-white rounded-2xl"> <FaPlus /> </button> 
 <button className="border border-altlearn bg-altlearn p-1 text-white rounded-2xl"> <FaShareAlt /></button> 
-<button className="border  bg-red-500 p-1 text-white rounded-2xl"> <FaTimes /> </button> 
+<button className="border  bg-red-500 p-1 text-white rounded-2xl" onClick={handleDelete}> <FaTimes /> </button> 
 
 </div>
       </div>

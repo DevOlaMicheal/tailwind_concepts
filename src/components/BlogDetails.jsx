@@ -1,5 +1,5 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useHistory } from 'react-router-dom'
 import useFetch from "../useFetch";
 import DetailsProfile from './Customerprofile/DetailsProfile';
 import loader from '../assets/ripple.svg'
@@ -8,6 +8,14 @@ export default function BlogDetails() {
 
     const { id } = useParams()
     const { data: details, Pending, error } = useFetch(`http://localhost:8000/Measurements/${id}`)
+    const history = useHistory()
+    const handleDelete = () => {
+      fetch('http://localhost:8000/Measurements/' + id, {
+        method: 'DELETE'
+      }).then(() => {
+        history.push('/')
+      })
+    }
   return (
     <div className="py-3 container mx-auto">
         <div className="text-center">
@@ -36,7 +44,7 @@ export default function BlogDetails() {
       )}
         {details && (
           
-        <DetailsProfile details={details} />
+        <DetailsProfile details={details} handleDelete={handleDelete} />
 
         )}
       </div> 

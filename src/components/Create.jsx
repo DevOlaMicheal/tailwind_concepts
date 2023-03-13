@@ -3,6 +3,9 @@ import { FaArrowLeft } from "react-icons/fa";
 import { useState } from "react";
 import MeasurementData from "./Create/MeasurementData";
 import CustomerData from "./Create/CustomerData";
+import Swal from 'sweetalert2'
+import { useHistory } from "react-router-dom";
+
 export default function Create() {
   const [dispaly, setDisplay] = useState(false);
 
@@ -10,6 +13,7 @@ export default function Create() {
   const [lastname, setLastname] = useState("");
   const [date, setDate] = useState("");
   const [style, setStyle] = useState("");
+  const [pending, setPending] = useState(false)
 
   const [m1, setM1] = useState("0.00");
   const [m2, setM2] = useState("0.00");
@@ -21,6 +25,9 @@ export default function Create() {
   const [m8, setM8] = useState("0.00");
   const [m9, setM9] = useState("0.00");
   const [m10, setM10] = useState("0.00");
+  const history = useHistory();
+
+
   const toggleForm = (e) => {
     setDisplay(true);
     e.preventDefault();
@@ -28,6 +35,7 @@ export default function Create() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setPending(true)
     const newmeasures = { firstname, lastname, date, style, measures:{m1,m2,m3,m4,m5,m6,m7,m8,m9,m10} };
 
     console.log(newmeasures);
@@ -37,7 +45,14 @@ export default function Create() {
       headers: { "Content-Type": "application/json"},
       body: JSON.stringify(newmeasures)
     }).then(() => {
-      console.log("Data submited");
+      Swal.fire('Saved!', '', 'success')
+      setPending(false)
+      // history.go(-1)
+      history.push('/')
+    }).catch((err) => {
+      Swal.fire({icon:'error',title:'Failed',  text:'Cant connect to server'})
+      history.push('/')
+
     })
   };
   return (
@@ -110,7 +125,9 @@ export default function Create() {
 
             {dispaly ? (
               <button className="bg-altlearn text-white rounded-lg shadow-lg p-2 px-4 mx-2">
-                <span>Submit</span>
+                {!pending && <span>Submit</span>}
+                {pending && <span>Sending data...</span>}
+
               </button>
             ) : (
               <div
